@@ -1,0 +1,162 @@
+/* Loader (loading.io/css | https://github.com/loadingio/css-spinner/tree/master/build/circle */
+.products,
+.products-admin,
+.edit-container {
+  .lds-circle {
+    display: block;
+    text-align: center;
+    transform: translateZ(1px);
+  }
+
+  .lds-circle > div {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    background: $colour-dark;
+    animation: lds-circle 3.8s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  
+  @keyframes lds-circle {
+    0%,
+    100% {
+      animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(1800deg);
+      animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% {
+      transform: rotateY(3600deg);
+    }
+  }
+}
+/*________________*/
+
+.products-container {
+  .title-head {
+    margin-top: 2.5em;
+  }
+
+  input {
+    border-radius: 4px;
+    border: 1px solid #b1b1b1;
+    padding: 0.5em;
+    width: 180px;
+  }
+}
+
+.products {
+  margin: 3em 0;
+
+  .products-row {
+    margin: 0 auto;
+  }
+
+  .card {
+    border: none;
+    text-align: center;
+    background: none;
+    color: $colour-brown;
+    font-family: $font-secondary;
+    margin: 0 auto;
+  }
+
+  .img-product {
+    background: $colour-secondary;
+    border-radius: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .img-product:hover {
+    filter: drop-shadow(0px 0px 4px #b87a5f);
+  }
+
+  .product-price {
+    font-weight: 600;
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: $mobile-width) {
+  .title-head {
+    h1 {
+      text-align: center;
+      display: block;
+    }
+
+    input {
+      display: block;
+      margin: 1em auto;
+    }
+  }
+
+  .products-container {
+    .row {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .products {
+    .img-product {
+      min-height: 250px;
+      width: 250px;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+  .products-container {
+    .title-head {
+      display: flex;
+      align-items: center;
+    }
+
+    h1 {
+      flex: 1;
+    }
+
+    .col-auto {
+      min-width: 290px;
+      margin: 0 auto;
+    }
+  }
+
+  .products {
+    .img-product {
+      min-height: 230px;
+      width: 230px;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-width) {
+  .products-container {
+    .title-head {
+      display: flex;
+      align-items: center;
+    }
+
+    h1 {
+      flex: 1;
+    }
+
+    .col-auto {
+      min-width: 320px;
+    }
+  }
+
+  .products {
+    .img-product {
+      min-height: 260px;
+      width: 260px;
+    }
+  }
+}

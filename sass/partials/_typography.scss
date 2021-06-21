@@ -1,0 +1,79 @@
+main {
+  h1 {
+    font-family: $font-primary;
+    text-transform: uppercase;
+    color: $colour-brown;
+  }
+
+  h2 {
+    font-family: $font-secondary;
+    color: $colour-brown;
+    font-weight: 600;
+  }
+
+  p,
+  .breadcrumb,
+  .breadcrumb a,
+  .no-results,
+  .empty-cart {
+    font-family: $font-secondary;
+    color: $colour-brown;
+  }
+
+  .no-results,
+  .empty-cart {
+    font-weight: 600;
+  }
+
+  .message {
+    .no-results {
+      width: 150px;
+      text-align: center;
+    }
+  }
+
+  .empty-cart {
+    margin: 2em 0;
+  }
+
+  input {
+    font-family: $font-secondary;
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: $mobile-width) {
+  main {
+    h1 {
+      font-size: 1.8em;
+    }
+
+    h2 {
+      font-size: 1.1em;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+  main {
+    h1 {
+      font-size: 2.1em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-width) {
+  main {
+    h1 {
+      font-size: 2.3em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+  }
+}

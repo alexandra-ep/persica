@@ -1,0 +1,25 @@
+/* Colour Palette */
+$colour-primary: #f5e3da;
+$colour-secondary: #f5c0a5;
+$colour-medium: #de9874;
+$colour-dark: #b87a5f;
+$colour-brown: #726562;
+
+/* Fonts */
+@font-face {
+  font-family: TenorSans;
+  src: url("../fonts/TenorSans.ttf");
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("../fonts/Quicksand.ttf");
+}
+
+$font-primary: TenorSans;
+$font-secondary: Quicksand;
+
+/* Breakpoints */
+$mobile-width: 500px;
+$tablet-width: 991px;
+$desktop-width: 992px;

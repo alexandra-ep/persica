@@ -1,0 +1,274 @@
+// Admin Front page text styles
+.admin-container {
+  h1 {
+    margin: 1.5em 0 0.5em 0;
+  }
+
+  a {
+    color: $colour-medium;
+    font-family: $font-secondary;
+    font-weight: 600;
+  }
+
+  a:hover {
+    color: $colour-dark;
+  }
+
+  .admin-subhead {
+    display: flex;
+
+    h2 {
+      font-family: $font-primary;
+      text-transform: uppercase;
+      flex: 1;
+    }
+
+    a {
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Admin Front page
+.products-admin {
+  margin: 3em 0;
+
+  .products-admin-row {
+    margin: 0 auto;
+  }
+
+  .card {
+    border: none;
+    text-align: center;
+    background: none;
+    color: $colour-brown;
+    font-family: $font-secondary;
+    margin: 0 auto;
+  }
+
+  .img-product {
+    background: $colour-secondary;
+    border-radius: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .img-product:hover {
+    filter: drop-shadow(0px 0px 4px #b87a5f);
+  }
+
+  .product-price {
+    font-weight: 600;
+  }
+}
+
+// Add and Edit pages
+.add-container,
+.edit-container {
+  margin-top: 2.5em;
+
+  .message-container {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 1em 0;
+    font-family: $font-secondary;
+  }
+  .message-container .error {
+    color: #e45e5e;
+  }
+
+  .message-container .success {
+    color: $colour-dark;
+  }
+
+  label,
+  input,
+  textarea {
+    font-family: $font-secondary;
+    color: $colour-brown;
+  }
+
+  button {
+    font-family: $font-primary;
+    text-transform: uppercase;
+  }
+
+  .btn-group,
+  .add-btn {
+    margin: 2em 0 0 0;
+    display: block;
+  }
+
+  .edit-btn,
+  .add-btn,
+  .delete-btn {
+    width: 100%;
+    font-size: 1.08em;
+  }
+
+  .edit-btn,
+  .add-btn {
+    background: $colour-brown;
+    color: $colour-primary;
+
+    &:hover {
+      background: $colour-medium;
+      color: $colour-brown;
+    }
+  }
+
+  .delete-btn {
+    background: $colour-dark;
+    color: $colour-primary;
+
+    &:hover {
+      background: $colour-medium;
+      color: $colour-brown;
+    }
+  }
+
+  #image {
+    background: $colour-secondary;
+    border-radius: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .img-product {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .image-form-group {
+    label,
+    #imageUrl,
+    .image-btn {
+      text-align: center;
+      display: block;
+      margin: 0.5em auto;
+    }
+
+    #imageUrl {
+      width: 60%;
+    }
+
+    .image-btn {
+      font-weight: 600;
+      color: $colour-medium;
+
+      &:hover {
+        color: $colour-medium;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.edit-container {
+  form {
+    display: none;
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: $mobile-width) {
+  .products-admin {
+    .lds-circle {
+      margin: 0 auto;
+    }
+
+    .col-auto {
+      margin: 0 auto;
+    }
+
+    .img-product {
+      min-height: 250px;
+      width: 250px;
+    }
+  }
+
+  .add-container,
+  .edit-container {
+    .row {
+      flex-direction: column;
+      margin: 3em auto;
+    }
+
+    #image {
+      min-height: 220px;
+      width: 220px;
+    }
+
+    .img-product {
+      max-height: 200px;
+      width: 200px;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+  .products-admin {
+    .col-auto {
+      min-width: 290px;
+      margin: 0.5em auto;
+    }
+
+    .img-product {
+      min-height: 230px;
+      width: 230px;
+    }
+  }
+
+  .add-container,
+  .edit-container {
+    .row {
+      flex-direction: column;
+      margin: 3em auto;
+    }
+
+    #image {
+      min-height: 250px;
+      width: 250px;
+    }
+
+    .img-product {
+      max-height: 220px;
+      width: 220px;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-width) {
+  .products-admin-row {
+    .col-auto {
+      margin-bottom: 2em;
+      min-width: 320px;
+    }
+
+    .img-product {
+      min-height: 260px;
+      width: 260px;
+    }
+  }
+
+  .add-container,
+  .edit-container {
+    .row {
+      margin: 3em auto;
+    }
+
+    #image {
+      min-height: 240px;
+      width: 240px;
+    }
+
+    .img-product {
+      max-height: 220px;
+      width: 220px;
+    }
+  }
+}

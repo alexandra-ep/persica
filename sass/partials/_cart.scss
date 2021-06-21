@@ -1,0 +1,141 @@
+.cart-container {
+  .title-head {
+    margin-top: 2.5em;
+  }
+
+  .cart-row {
+    margin: 3em 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .img-product {
+    background: $colour-secondary;
+    border-radius: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .img-product:hover {
+    filter: drop-shadow(0px 0px 4px #b87a5f);
+  }
+
+  .cart-details {
+    text-align: center;
+    margin: 3em auto;
+
+    .total-title,
+    .total {
+      font-weight: 600;
+    }
+
+    .input-group {
+      margin: 1em auto;
+    }
+
+    button {
+      font-family: $font-primary;
+      text-transform: uppercase;
+      border: none;
+    }
+
+    .btn-discount {
+      background: $colour-dark;
+      color: $colour-primary;
+      border-radius: 0 4px 4px 0;
+
+      &:hover {
+        background: $colour-medium;
+      }
+    }
+
+    .cart-buttons button {
+      padding: 0.5em 1em;
+      border-radius: 4px;
+      width: 250px;
+
+      &:hover {
+        background: $colour-medium;
+      }
+    }
+
+    .btn-checkout {
+      background: $colour-dark;
+      color: $colour-primary;
+      margin: 1em 0;
+    }
+
+    .btn-continue {
+      background: $colour-brown;
+      color: $colour-primary;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: $mobile-width) {
+  .cart {
+    .img-product {
+      min-height: 230px;
+      width: 230px;
+      margin-bottom: 1em;
+    }
+
+    .cart-row {
+      flex-direction: column;
+    }
+
+    .product-title,
+    .product-price {
+      margin: 0.5em 0;
+    }
+  }
+
+  .cart-details {
+    .input-group {
+      width: 280px;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+  .cart {
+    .img-product {
+      min-height: 210px;
+      width: 210px;
+    }
+
+    .cart-row {
+      width: 95%;
+      justify-content: space-between;
+    }
+  }
+
+  .cart-details {
+    .input-group {
+      width: 300px;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-width) {
+  .cart {
+    .img-product {
+      min-height: 260px;
+      width: 260px;
+    }
+
+    .cart-row {
+      width: 80%;
+      justify-content: space-between;
+    }
+  }
+
+  .cart-details {
+    .input-group {
+      width: 320px;
+    }
+  }
+}

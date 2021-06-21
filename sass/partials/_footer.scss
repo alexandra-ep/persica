@@ -1,0 +1,118 @@
+footer {
+  background: $colour-primary;
+  color: $colour-brown;
+
+  .footer-top {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
+  h5,
+  ul li a,
+  input {
+    font-family: $font-secondary;
+  }
+
+  h5 {
+    font-size: 1.15em;
+  }
+
+  a {
+    color: $colour-brown;
+  }
+
+  a:hover {
+    font-weight: 600;
+    text-decoration: none;
+    color: $colour-brown;
+  }
+
+  .btn, h6 {
+    font-family: $font-primary;
+    text-transform: uppercase;
+  }
+
+  h6 {
+    font-size: 1.15em;
+  }
+
+  .btn {
+    color: $colour-primary;
+    background: $colour-dark;
+    border-radius: 0 4px 4px 0;
+
+    &:hover {
+      background: $colour-medium;
+      color: $colour-brown;
+    }
+  }
+
+  input {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    background: $colour-dark;
+    padding: 0.4em;
+    font-family: $font-primary;
+    align-items: center;
+
+    span {
+      flex: 1;
+      margin-left: 2em;
+      color: $colour-primary;
+    }
+
+    .social-media-icons i {
+      color: $colour-primary;
+    }
+
+    .social-media-icons i:hover {
+      color: $colour-brown;
+    }
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: $mobile-width) {
+  footer {
+    form {
+      padding: 0 2em;
+    }
+
+    .social-media-icons i {
+      font-size: 1.7em;
+      padding: 0.2em;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+  footer {
+    .social-media-icons i {
+      font-size: 2em;
+      padding: 0.3em;
+    }
+
+    .social-media-icons {
+      margin-right: 2em;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-width) {
+  footer {
+    input {
+      max-width: 20em;
+    }
+    .social-media-icons i {
+      font-size: 2.2em;
+      padding: 0.5em;
+    }
+
+    .social-media-icons {
+      margin-right: 2em;
+    }
+  }
+}

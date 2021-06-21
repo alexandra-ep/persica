@@ -1,0 +1,190 @@
+// Login links
+.main-login {
+  .link-admin {
+    text-align: right;
+  }
+
+  .links-login {
+    margin: 0.5em 0;
+  }
+
+  .link-admin,
+  .links-login {
+    display: block;
+    font-family: $font-secondary;
+    color: $colour-medium;
+  }
+}
+
+// Login and Admin login
+.login-container,
+.admin-login-container {
+  h2,
+  .signin-btn {
+    font-family: $font-primary;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  input {
+    margin: 1em auto;
+  }
+
+  button {
+    text-align: center;
+    width: 100%;
+  }
+
+  .signin-btn {
+    color: $colour-primary;
+    background: $colour-brown;
+
+    &:hover {
+      background: $colour-medium;
+      color: $colour-brown;
+    }
+  }
+}
+
+// Login
+.login-container .row {
+  display: flex;
+  margin: 2em 0;
+
+  .col-auto {
+    flex: 1;
+  }
+
+  .signup-btn {
+    color: $colour-brown;
+    background: $colour-secondary;
+    font-family: $font-secondary;
+    display: block;
+    margin: 1em auto;
+
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}
+
+// Admin login
+.admin-login-container {
+  margin: 5em auto;
+
+  .message-container .error {
+    font-family: $font-secondary;
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: $mobile-width) {
+  .main-login {
+    .link-admin {
+      margin: 2.5em 1em 0 0;
+    }
+  }
+
+  .login-container .row {
+    display: block;
+    flex-direction: row;
+    margin-bottom: 5em;
+
+    .signin-btn {
+      margin-bottom: 3em;
+    }
+  }
+
+  .admin-login-container,
+  .login-container {
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+
+  .admin-login-container {
+    margin-bottom: 4.5em;
+
+    form {
+      max-width: 350px;
+      margin: 2em auto;
+    }
+
+    .message-container .error {
+      display: block;
+      color: #e45e5e;
+      font-weight: 600;
+      margin: 1em 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+  .main-login {
+    .link-admin {
+      margin: 2.5em 2em 0 0;
+    }
+  }
+
+  .login-container {
+    .col-auto {
+      margin: 1em 0;
+    }
+  }
+
+  .admin-login-container,
+  .login-container {
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+
+  .admin-login-container {
+    form {
+      max-width: 500px;
+      margin: 2em auto;
+    }
+
+    .message-container .error {
+      display: block;
+      color: #e45e5e;
+      font-weight: 600;
+      margin: 1em 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-width) {
+  .main-login {
+    .link-admin {
+      margin: 2.5em 4em 0 0;
+    }
+  }
+
+  .admin-login-container,
+  .login-container {
+    h2 {
+      font-size: 1.7em;
+    }
+  }
+
+  .login-container {
+    .col-auto {
+      margin: 2em 3em;
+    }
+  }
+
+  .admin-login-container {
+    form {
+      max-width: 500px;
+      margin: 2em auto;
+    }
+
+    .message-container .error {
+      display: block;
+      color: #e45e5e;
+      font-weight: 600;
+      margin: 1em 0;
+    }
+  }
+}
